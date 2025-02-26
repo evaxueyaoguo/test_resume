@@ -10,6 +10,10 @@ header {
   color: #fff;
   padding: 20px 0;
   text-align: center;
+  /* fixed header, can be removed*/
+  position: fixed;
+  top: 0;
+  width: 100%; /* Ensure it spans the full width of the screen */
 }
 
 .header-content {
