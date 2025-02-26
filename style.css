@@ -11,10 +11,10 @@ header {
   padding: 20px 0;
   text-align: center;
   /* fixed header, can be removed*/
-  position: fixed;
+  /* position: fixed;
   top: 0;
   width: 100%; /* Ensure it spans the full width of the screen */
-  z-index: 1000; /* Optional: to make sure it stays above other content */
+  /* z-index: 1000; /* Optional: to make sure it stays above other content */
 }
 
 .header-content {
