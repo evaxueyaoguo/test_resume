@@ -102,6 +102,7 @@ section ul li {
 .sub-header h3,
 .sub-header p {
   margin: 0;
+  max-width: 80%;
 }
 
 .sub-header span {
