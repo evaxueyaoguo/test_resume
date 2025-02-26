@@ -188,19 +188,22 @@
                 function showSlides(n) {
                 let i;
                 let slides = document.getElementsByClassName("mySlides");
-                let dots = document.getElementsByClassName("dot");
+                // let dots = document.getElementsByClassName("dot");
                 if (n > slides.length) {slideIndex = 1}
                 if (n < 1) {slideIndex = slides.length}
                 for (i = 0; i < slides.length; i++) {
                     slides[i].style.display = "none";
                 }
-                for (i = 0; i < dots.length; i++) {
+                /* for (i = 0; i < dots.length; i++) {
                     dots[i].className = dots[i].className.replace(" active", "");
+                }*/
+                if (slides[slideIndex-1]) {
+                    slides[slideIndex-1].style.display = "block";
                 }
-                slides[slideIndex-1].style.display = "block";
-                dots[slideIndex-1].className += " active";
+                //dots[slideIndex-1].className += " active";
                 }
 
+                let slideInterval = setInterval(() => plusSlides(1), 3000);
             </script>
             <!-- Slideshow container -->
             <div class="slideshow-container">
@@ -244,6 +247,7 @@
             <script>
                 // Function to show all images when "Expand All" is clicked
                 function expandAll() {
+                    clearInterval(slideInterval); 
                     let slides = document.getElementsByClassName("mySlides");
                     for (let i = 0; i < slides.length; i++) {
                         slides[i].style.display = "block";  // Display all images
@@ -269,6 +273,7 @@
 
                 // Function to hide all images except the first one when "Collapse All" is clicked
                 function collapseAll() {
+                    let slideInterval = setInterval(() => plusSlides(1), 3000);
                     let slides = document.getElementsByClassName("mySlides");
                     for (let i = 1; i < slides.length; i++) {  // Start from 1 to skip the first image
                         slides[i].style.display = "none";  // Hide all images except the first
